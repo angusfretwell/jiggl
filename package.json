@@ -1,0 +1,45 @@
+{
+  "name": "jiggl",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --compilers js:babel-register",
+    "start": "forever index.js",
+    "watch": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angusfretwell/jiggl.git"
+  },
+  "author": "Angus Fretwell <angus@inoutput.io> (http://angusfretwell.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angusfretwell/jiggl/issues"
+  },
+  "homepage": "https://github.com/angusfretwell/jiggl#readme",
+  "dependencies": {
+    "babel-plugin-syntax-async-functions": "^6.5.0",
+    "babel-plugin-transform-regenerator": "^6.6.5",
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-airbnb": "^1.1.1",
+    "babel-register": "^6.7.2",
+    "dotenv": "^2.0.0",
+    "forever": "^0.15.1",
+    "koa": "^2.0.0",
+    "koa-bodyparser": "^3.0.0",
+    "koa-helmet": "^2.0.0-alpha.1",
+    "koa-json-error": "^3.0.0",
+    "koa-logger": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.2",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-plugin-import": "^1.4.0",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.9.1",
+    "should": "^8.3.1"
+  }
+}
