@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "airbnb"
+  ],
+  "plugins": [
+    "syntax-async-functions",
+    "transform-regenerator"
+  ]
+}
