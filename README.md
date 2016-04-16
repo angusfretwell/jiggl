@@ -18,33 +18,33 @@ Development
 
 ### Commands
 
+Start the application with [forever](https://github.com/foreverjs/forever):
+
 ```
 $ npm start
 ```
 
-Starts the application using [forever](https://github.com/foreverjs/forever).
+Watch for changes and restart the server automatically using [nodemon](https://github.com/remy/nodemon):
 
 ```
 $ npm run watch
 ```
 
-Watches for changes and restarts the server automatically using [nodemon](https://github.com/remy/nodemon).
+Run tests with [mocha](http://mochajs.org):
 
 ```
 $ npm test
 ```
 
-Runs tests using [mocha](http://mochajs.org).
+Lint code using [eslint](http://eslint.org):
 
 ```
 $ npm run lint
 ```
 
-Lints code using [eslint](http://eslint.org).
-
 ### Debugging
 
-You can start Jiggl in debug mode by exporting scopes to the `DEBUG` environment variable (e.g. `jiggl:application` or `jiggl:*`).
+You can start Jiggl in debug mode by exporting scopes to the `DEBUG` environment variable (e.g. `jiggl:application` or `jiggl:*`):
 
 ```
 $ DEBUG=jiggl:* npm run watch
