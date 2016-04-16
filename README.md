@@ -14,6 +14,9 @@ Development
 
 1. Install [Node.js](https://nodejs.org/en/) 5.0.0 or later
 2. Run `npm install` to install the application's dependencies
+3. Copy the contents of `.env.example` into a `.env` file, and add your Jira and Toggl credentials
+
+### Commands
 
 ```
 npm start
