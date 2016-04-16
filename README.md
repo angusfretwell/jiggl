@@ -41,7 +41,7 @@ Lints code using [eslint](http://eslint.org).
 
 ### Debugging
 
-You can start the app in debug mode by exporting scopes to the `DEBUG` environment variable (e.g. `jiggl:application` or `jiggl:*`):
+You can start Jiggl in debug mode by exporting scopes to the `DEBUG` environment variable (e.g. `jiggl:application` or `jiggl:*`).
 
 ```
 DEBUG=jiggl:* npm run watch
