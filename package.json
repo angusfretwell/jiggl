@@ -7,7 +7,8 @@
     "lint": "eslint .",
     "test": "babel-node node_modules/.bin/babel-istanbul cover _mocha && codecov",
     "start": "forever index.js",
-    "watch": "nodemon"
+    "watch": "nodemon",
+    "knex": "babel-node node_modules/.bin/knex"
   },
   "repository": {
     "type": "git",
@@ -27,14 +28,20 @@
     "babel-polyfill": "^6.7.4",
     "babel-preset-airbnb": "^1.1.1",
     "babel-register": "^6.7.2",
+    "bookshelf": "^0.9.4",
     "debug": "^2.2.0",
     "dotenv": "^2.0.0",
     "forever": "^0.15.1",
+    "jira-got": "^0.1.0",
+    "knex": "^0.10.0",
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.0.0",
     "koa-helmet": "^2.0.0-alpha.1",
     "koa-json-error": "^3.0.0",
-    "koa-logger": "^2.0.0"
+    "koa-logger": "^2.0.0",
+    "koa-router": "^7.0.0",
+    "pg": "^4.5.3",
+    "toggl-got": "^0.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
