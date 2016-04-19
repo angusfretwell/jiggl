@@ -4,6 +4,8 @@
   ],
   "plugins": [
     "syntax-async-functions",
-    "transform-regenerator"
+    "transform-regenerator",
+    "transform-function-bind",
+    "transform-class-properties"
   ]
 }
