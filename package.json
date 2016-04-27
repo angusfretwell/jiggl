@@ -32,7 +32,7 @@
     "debug": "^2.2.0",
     "dotenv": "^2.0.0",
     "forever": "^0.15.1",
-    "jira-got": "^0.1.0",
+    "jira-got": "^0.2.0",
     "knex": "^0.10.0",
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.0.0",
