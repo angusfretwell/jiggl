@@ -40,6 +40,7 @@
     "koa-json-error": "^3.0.0",
     "koa-logger": "^2.0.0",
     "koa-router": "^7.0.0",
+    "kue": "^0.10.5",
     "pg": "^4.5.3",
     "toggl-got": "^0.1.0",
     "winston": "^2.2.0"
