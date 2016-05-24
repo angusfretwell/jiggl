@@ -3,5 +3,6 @@
 require('../bootstrap');
 const queue = require('../lib/queue');
 
-queue.create('sync worklog').priority('medium').save();
-process.exit();
+queue.create('sync worklog').priority('critical').save((err) => {
+  process.exit(!!err);
+});
