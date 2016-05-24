@@ -1,4 +1,4 @@
-import './bootstrap';
+require('./bootstrap');
 
 module.exports = {
   client: 'pg',
