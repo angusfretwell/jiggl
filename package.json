@@ -8,7 +8,7 @@
     "test": "babel-node node_modules/.bin/babel-istanbul cover _mocha && codecov",
     "start": "forever index.js",
     "watch": "nodemon",
-    "knex": "babel-node node_modules/.bin/knex"
+    "knex": "node_modules/.bin/knex"
   },
   "repository": {
     "type": "git",
@@ -43,8 +43,8 @@
     "koa-json-error": "^3.0.0",
     "koa-logger": "^2.0.0",
     "koa-router": "^7.0.0",
-    "natural": "^0.4.0",
     "kue": "^0.11.0",
+    "natural": "^0.4.0",
     "pg": "^4.5.3",
     "toggl-got": "^0.1.0",
     "winston": "^2.2.0"
