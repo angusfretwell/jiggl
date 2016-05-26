@@ -3,5 +3,5 @@ require('./lib/app');
 
 // Run the worker in the web process in debug mode
 if (process.env.DEBUG) {
-  require('./worker');
+  require('./worker'); // eslint-disable-line global-require
 }
