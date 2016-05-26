@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+require('../bootstrap');
+const queue = require('../lib/queue');
+const schedule = require('node-schedule');
+const winston = require('winston');
+
+schedule.scheduleJob('*/30 * * * *', () => {
+  queue.create('sync time entries').priority('critical').save((err) => {
+    winston.error('Failed to schedule time entries sync', err);
+  });
+});

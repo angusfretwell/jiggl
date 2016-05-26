@@ -1,0 +1,30 @@
+web:
+  image: angusfretwell/jiggl
+  ports:
+    - "3000:3000"
+  environment:
+    REDIS_URL: 'redis://redis:6379'
+    DATABASE_URL: 'postgres://postgres:@postgres:5432/postgres'
+  links:
+    - redis
+    - postgres
+worker:
+  image: angusfretwell/jiggl
+  command: 'npm run worker'
+  environment:
+    REDIS_URL: 'redis://redis:6379'
+    DATABASE_URL: 'postgres://postgres:@postgres:5432/postgres'
+  links:
+    - redis
+    - postgres
+sync:
+  image: angusfretwell/jiggl
+  command: 'npm run sync'
+  environment:
+    REDIS_URL: 'redis://redis:6379'
+  links:
+    - redis
+redis:
+  image: redis
+postgres:
+  image: postgres
