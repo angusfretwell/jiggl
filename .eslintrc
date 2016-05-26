@@ -3,7 +3,8 @@
   "parser": "babel-eslint",
   "env": {
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "jquery": true
   },
   "rules": {
     "no-param-reassign": 0
