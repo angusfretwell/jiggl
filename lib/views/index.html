@@ -32,11 +32,10 @@
     <h1>Jiggl configuration</h1>
 
     <form class="pure-form" method="POST">
-      {% for config in configs %}
-        {% if config.key === 'PROJECT_MAPPINGS' %}
-          <h2>Project mappings</h2>
-
-          <fieldset class="project-mappings">
+      <h2>Project mappings</h2>
+      <fieldset class="project-mappings">
+        {% for config in configs %}
+          {% if config.key === 'PROJECT_MAPPINGS' %}
             {% for map in config.value %}
               <div>
                 <input
@@ -52,11 +51,11 @@
                 <a class="pure-button js-remove-mapping">&times;</a>
               </div>
             {% endfor %}
-          </fieldset>
+          {% endif %}
+        {% endfor %}
+      </fieldset>
 
-          <a class="pure-button js-add-mapping">Add project mapping</a>
-        {% endif %}
-      {% endfor %}
+      <a class="pure-button js-add-mapping">Add project mapping</a>
 
       <input class="pure-button pure-button-primary" type="submit" value="Save changes">
     </form>
