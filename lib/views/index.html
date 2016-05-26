@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jiggl configuration</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <style>
+      body {
+        font-family: system, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Lucida Grande';
+        font-size: 15px;
+        padding: 0 2em;
+      }
+
+      h1 {
+        font-weight: 200;
+        font-size: 3em;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: 1.15em;
+        color: #999;
+      }
+
+      .project-mappings > div {
+        margin-bottom: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jiggl configuration</h1>
+
+    <form class="pure-form" method="POST">
+      {% for config in configs %}
+        {% if config.key === 'PROJECT_MAPPINGS' %}
+          <h2>Project mappings</h2>
+
+          <fieldset class="project-mappings">
+            {% for map in config.value %}
+              <div>
+                <input
+                  type="text"
+                  name="PROJECT_MAPPINGS[{{ loop.index }}][togglPid]"
+                  value="{{ map.togglPid }}"
+                  placeholder="Toggl project id">
+                <input
+                  type="text"
+                  name="PROJECT_MAPPINGS[{{ loop.index }}][jiraKey]"
+                  value="{{ map.jiraKey }}"
+                  placeholder="Jira key">
+                <a class="pure-button js-remove-mapping">&times;</a>
+              </div>
+            {% endfor %}
+          </fieldset>
+
+          <a class="pure-button js-add-mapping">Add project mapping</a>
+        {% endif %}
+      {% endfor %}
+
+      <input class="pure-button pure-button-primary" type="submit" value="Save changes">
+    </form>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+      $('.js-add-mapping').click(function(e) {
+        e.preventDefault();
+
+        const key = Math.random();
+
+        $('.project-mappings').append(`
+          <div>
+            <input
+              type="text"
+              name="PROJECT_MAPPINGS[${key}][togglPid]"
+              placeholder="Toggl project id">
+            <input
+              type="text"
+              name="PROJECT_MAPPINGS[${key}][jiraKey]"
+              placeholder="Jira key">
+            <a class="pure-button js-remove-mapping">&times;</a>
+          </div>
+        `);
+      });
+
+      $(document).on('click', '.js-remove-mapping', function(e) {
+        e.preventDefault();
+        $(this).parent('div').remove();
+      });
+    </script>
+  </body>
+</html>
