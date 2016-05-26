@@ -2,13 +2,13 @@
   "name": "jiggl",
   "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "bin/web",
   "scripts": {
     "lint": "eslint .",
     "test": "babel-node node_modules/.bin/babel-istanbul cover _mocha && codecov",
-    "start": "forever index.js",
-    "worker": "forever worker.js",
-    "sync": "node bin/syncTimeEntries.js",
+    "start": "npm run knex migrate:latest && forever bin/web",
+    "worker": "forever bin/worker",
+    "sync": "node bin/sync",
     "watch": "nodemon",
     "knex": "node_modules/.bin/knex"
   },
