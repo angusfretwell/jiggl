@@ -47,6 +47,7 @@
     "koa-logger": "^2.0.0",
     "koa-router": "^7.0.0",
     "kue": "^0.11.0",
+    "localtunnel": "^1.8.1",
     "moment": "^2.13.0",
     "natural": "^0.4.0",
     "pg": "^4.5.3",
@@ -62,7 +63,6 @@
     "eslint": "^2.10.2",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.8.0",
-    "localtunnel": "^1.8.1",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1",
     "should": "^8.3.1"
