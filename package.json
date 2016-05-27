@@ -4,7 +4,6 @@
   "description": "",
   "main": "bin/web",
   "scripts": {
-    "postinstall": "npm run knex migrate:latest",
     "lint": "eslint .",
     "test": "babel-node node_modules/.bin/babel-istanbul cover _mocha && codecov",
     "start": "forever bin/web",
