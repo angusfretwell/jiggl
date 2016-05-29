@@ -1,5 +1,5 @@
-[WIP] Jiggl
-===========
+Jiggl
+=====
 
 [![Travis](https://img.shields.io/travis/angusfretwell/jiggl/master.svg)](https://travis-ci.org/angusfretwell/jiggl)
 [![Code Climate](https://img.shields.io/codeclimate/github/angusfretwell/jiggl.svg)](https://codeclimate.com/github/angusfretwell/jiggl)
