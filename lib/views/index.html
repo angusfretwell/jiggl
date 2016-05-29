@@ -60,9 +60,10 @@
       <input class="pure-button pure-button-primary" type="submit" value="Save changes">
     </form>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
-      $('.js-add-mapping').click(function(e) {
+      $('.js-add-mapping').click((e) => {
         e.preventDefault();
 
         const key = Math.random();
@@ -82,7 +83,7 @@
         `);
       });
 
-      $(document).on('click', '.js-remove-mapping', function(e) {
+      $(document).on('click', '.js-remove-mapping', (e) => {
         e.preventDefault();
         $(this).parent('div').remove();
       });
