@@ -85,7 +85,7 @@
 
       $(document).on('click', '.js-remove-mapping', (e) => {
         e.preventDefault();
-        $(this).parent('div').remove();
+        $(e.target).parent('div').remove();
       });
     </script>
   </body>
