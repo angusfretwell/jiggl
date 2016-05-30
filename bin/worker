@@ -5,7 +5,7 @@ const queue = require('../lib/queue');
 
 queue.watchStuckJobs();
 
-queue.process('sync time entries', 10, require('../lib/jobs/syncTimeEntries'));
-queue.process('sync time entry', 10, require('../lib/jobs/syncTimeEntry'));
-queue.process('upsert toggl task', 10, require('../lib/jobs/upsertTogglTask'));
-queue.process('archive toggl task', 10, require('../lib/jobs/archiveTogglTask'));
+queue.process('sync time entries', 20, require('../lib/jobs/syncTimeEntries'));
+queue.process('sync time entry', 20, require('../lib/jobs/syncTimeEntry'));
+queue.process('upsert toggl task', 20, require('../lib/jobs/upsertTogglTask'));
+queue.process('archive toggl task', 20, require('../lib/jobs/archiveTogglTask'));
