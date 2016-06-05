@@ -66,7 +66,7 @@ describe('JiraHelper', () => {
       JiraHelper.createWorklog('TEST-123', { key: 'value' });
       jira.post.should.be.calledOnce();
       jira.post.should.be.calledWithExactly('issue/TEST-123/worklog', {
-        body: JSON.stringify({ fields: { key: 'value' } }),
+        body: JSON.stringify({ key: 'value' }),
       });
     });
   });
@@ -76,7 +76,7 @@ describe('JiraHelper', () => {
       JiraHelper.updateWorklog('TEST-123', 123, { key: 'value' });
       jira.put.should.be.calledOnce();
       jira.put.should.be.calledWithExactly('issue/TEST-123/worklog/123', {
-        body: JSON.stringify({ fields: { key: 'value' } }),
+        body: JSON.stringify({ key: 'value' }),
       });
     });
   });
